@@ -1,0 +1,25 @@
+<div class="container mt-2">
+    <table class="table" *ngIf="customers">
+        <thead class="bg-black text-white">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Orders</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers">
+                <td>{{customer.id}}</td>
+                <td>{{customer.name}}</td>
+                <td>{{customer.email}}</td>
+                <td>
+                    <button 
+                        class="btn btn-primary" 
+                        (click)="getOrdersByCustomer(customer)">Orders
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

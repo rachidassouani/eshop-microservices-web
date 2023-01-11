@@ -1,0 +1,20 @@
+<div class="container mt-2">
+    <table class="table" *ngIf="products">
+        <thead class="bg-black text-white">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.quantity}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
